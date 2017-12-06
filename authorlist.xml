@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="content">
+	<name>PLG_CONTENT_AUTHORLIST</name>
+	<author>Jesus Vargas</author>
+	<creationDate>Jan 2011</creationDate>
+	<copyright>Copyright (C) 2005 - 2011 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>chuzky@gmail.com</authorEmail>
+	<authorUrl>http://www.munditico.com</authorUrl>
+	<version>1.2.3</version>
+	<description>PLG_CONTENT_AUTHORLIST_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="authorlist">authorlist.php</filename>
+		<filename>authorlist_class.php</filename>
+		<filename>index.html</filename>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+	</files>
+	<update></update>
+	<config>
+		<fields name="params">  
+
+			<fieldset name="written_by">
+			
+				<field name="display" type="list"
+					default="0"
+					label="PLG_CONTENT_AUTHORLIST_FIELD_AUTHOR_LINK_LABEL"
+					description="PLG_CONTENT_AUTHORLIST_FIELD_AUTHOR_LINK_DESC">
+					<option value="0">PLG_CONTENT_AUTHORLIST_OPTION_CONTACT_OVERRIDE</option>
+					<option value="1">PLG_CONTENT_AUTHORLIST_OPTION_CONTACT_ONLY</option>
+  	    			<option value="2">PLG_CONTENT_AUTHORLIST_OPTION_DONT_USE</option>
+				</field>
+			
+				<field name="alias" type="list"
+					default="1"
+					label="PLG_CONTENT_AUTHORLIST_FIELD_LINK_ALIAS_LABEL"
+					description="PLG_CONTENT_AUTHORLIST_FIELD_LINK_ALIAS_DESC">
+					<option value="1">PLG_CONTENT_AUTHORLIST_OPTION_ALIAS_KEEP</option>
+  	    			<option value="2">PLG_CONTENT_AUTHORLIST_OPTION_ALIAS_OVERRIDE</option>
+  	    			<option value="0">PLG_CONTENT_AUTHORLIST_OPTION_ALIAS_SKIP</option>
+				</field>
+				
+				<field name="meta_author" type="radio"
+					class="btn-group"
+					default="1"
+					label="PLG_CONTENT_AUTHORLIST_FIELD_META_AUTHOR_LABEL"
+					description="PLG_CONTENT_AUTHORLIST_FIELD_META_AUTHOR_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+			</fieldset>
+
+			<fieldset name="about_author">  
+				
+				<field name="show_block" type="list"
+					class="btn-group"
+					default="1"
+					label="PLG_CONTENT_AUTHORLIST_FIELD_SHOW_BLOCK_LABEL"
+					description="PLG_CONTENT_AUTHORLIST_FIELD_SHOW_BLOCK_DESC">
+					<option value="0">JNO</option>
+					<option value="1">PLG_CONTENT_AUTHORLIST_OPTION_ON_AFTER_CONTENT</option>
+					<option value="2">PLG_CONTENT_AUTHORLIST_OPTION_ON_BEFORE_CONTENT</option>
+					<option value="3">PLG_CONTENT_AUTHORLIST_OPTION_ON_AFTER_TITLE</option>
+				</field>
+				
+				<field name="show_title" type="radio"
+					class="btn-group"
+					default="1"
+					label="PLG_CONTENT_AUTHORLIST_FIELD_SHOW_LEYEND_LABEL"
+					description="PLG_CONTENT_AUTHORLIST_FIELD_SHOW_LEYEND_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field name="show_name" type="radio"
+					class="btn-group"
+					default="1"
+					label="PLG_CONTENT_AUTHORLIST_FIELD_LINK_NAME_LABEL"
+					description="PLG_CONTENT_AUTHORLIST_FIELD_LINK_NAME_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field name="show_image" type="list"
+					default="2"
+					label="PLG_CONTENT_AUTHORLIST_FIELD_SHOW_IMAGE_LABEL"
+					description="PLG_CONTENT_AUTHORLIST_FIELD_SHOW_IMAGE_DESC">
+					<option value="0">JHIDE</option>
+					<option value="1">PLG_CONTENT_AUTHORLIST_OPTION_IMAGE_LINK</option>
+					<option value="2">PLG_CONTENT_AUTHORLIST_OPTION_IMAGE_LINK_NOT</option>
+				</field>
+				
+				<field name="show_desc" type="radio"
+					class="btn-group"
+					default="1"
+					label="PLG_CONTENT_AUTHORLIST_FIELD_SHOW_DESC_LABEL"
+					description="PLG_CONTENT_AUTHORLIST_FIELD_SHOW_DESC_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				
+				<field name="limit_desc" type="text"
+					default=""
+					label="PLG_CONTENT_AUTHORLIST_FIELD_LIMIT_DESC_LABEL"
+					description="PLG_CONTENT_AUTHORLIST_FIELD_LIMIT_DESC_DESC">
+				</field>
+				
+				<field name="gplus_url" type="radio"
+					class="btn-group"
+					default="1"
+					label="PLG_CONTENT_AUTHORLIST_FIELD_GPLUS_LINK_LABEL"
+					description="PLG_CONTENT_AUTHORLIST_FIELD_GPLUS_LINK_DESC">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>     
+				
+			</fieldset>
+
+			<fieldset name="more_articles">  
+				
+				<field name="show_block2" type="list"
+					class="btn-group"
+					default="1"
+					label="PLG_CONTENT_AUTHORLIST_FIELD_SHOW_BLOCK_LABEL"
+					description="PLG_CONTENT_AUTHORLIST_FIELD_SHOW_BLOCK_DESC">
+					<option value="0">JNO</option>
+					<option value="1">PLG_CONTENT_AUTHORLIST_OPTION_ON_AFTER_CONTENT</option>
+					<option value="2">PLG_CONTENT_AUTHORLIST_OPTION_ON_BEFORE_CONTENT</option>
+					<option value="3">PLG_CONTENT_AUTHORLIST_OPTION_ON_AFTER_TITLE</option>
+				</field>      
+				
+				<field name="limit_items" type="text"
+					default=""
+					label="PLG_CONTENT_AUTHORLIST_FIELD_LIMIT_ITEMS_LABEL"
+					description="PLG_CONTENT_AUTHORLIST_FIELD_LIMIT_ITEMS_DESC">
+				</field>
+        
+				<field name="orderby"
+					type="list"
+					default="rdate"
+					label="JGLOBAL_Article_Order_Label"
+					description="JGLOBAL_Article_Order_Desc">
+					<option
+						value="rdate">JGLOBAL_MOST_RECENT_FIRST</option>
+					<option
+						value="date">JGLOBAL_OLDEST_FIRST</option>
+					<option
+						value="alpha">JGLOBAL_TITLE_ALPHABETICAL</option>
+					<option
+						value="ralpha">JGLOBAL_TITLE_REVERSE_ALPHABETICAL</option>
+					<option
+						value="author">JGLOBAL_AUTHOR_ALPHABETICAL</option>
+					<option
+						value="rauthor">JGLOBAL_AUTHOR_REVERSE_ALPHABETICAL</option>
+					<option
+						value="hits">JGLOBAL_MOST_HITS</option>
+					<option
+						value="rhits">JGLOBAL_LEAST_HITS</option>
+					<option
+						value="order">JGLOBAL_ARTICLE_MANAGER_ORDER</option>
+					<option
+						value="rand">PLG_CONTENT_AUTHORLIST_OPTION_RANDOM_ORDER</option>
+				</field>
+
+			    <field name="order_date" type="list"
+					default="published"
+					description="JGLOBAL_ORDERING_DATE_DESC"
+					label="JGLOBAL_ORDERING_DATE_LABEL"
+				> 
+					<option value="created">JGLOBAL_CREATED</option>
+					<option value="modified">JGLOBAL_MODIFIED</option>
+					<option value="published">JPUBLISHED</option>
+  				</field>
+				
+				<field name="category_filtering_type" type="list"
+					default="1"
+					label="PLG_CONTENT_AUTHORLIST_FIELD_CATFILTERINGTYPE_LABEL"
+					description="PLG_CONTENT_AUTHORLIST_FIELD_CATFILTERINGTYPE_DESC"
+				>
+					<option value="1">PLG_CONTENT_AUTHORLIST_OPTION_INCLUSIVE_VALUE
+					</option>
+					<option value="0">PLG_CONTENT_AUTHORLIST_OPTION_EXCLUSIVE_VALUE
+					</option>
+				</field>
+			
+				<field
+					name="catid"
+					type="category"
+					extension="com_content"
+					multiple="true"
+					default=""
+					size="10"
+					label="JCATEGORY"
+					description="MOD_ARTICLES_NEWS_FIELD_CATEGORY_DESC" >
+					<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+				
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>
