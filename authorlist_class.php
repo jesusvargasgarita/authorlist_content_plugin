@@ -32,6 +32,8 @@ class plgContentAuthorList extends JPlugin
 
 			if (!empty($row->contactid) && $this->params->get('display') == 1) return;
 
+			if (!isset($row->created_by) || intval($row->created_by) <= 0) return;
+
 			$author = new stdClass();
 			$user = JUser::getInstance($row->created_by);
 			$db	  = JFactory::getDbo();
